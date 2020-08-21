@@ -1,24 +1,27 @@
 window.onload=function() {
     lengthObj = document.getElementById('txtLength');
-    girthObj = document.getElementById('txtGirth');
-    weightObj = document.getElementById('tdWeight');
-    document.getElementById('btnReset').onclick = resetInputs;
-    document.getElementById('btnCalc').onclick = calcWeight;
+    heightObj = document.getElementById('txtHeight');
+    widthObj = document.getElementById('txWidth');
+	costObj = document.getElementById('tdCost');
+    document.getElementById('btnReset').onclick = <input type="reset">;
+    document.getElementById('btnCalc').onclick = calcwidth;
 }
 
 function resetInputs() {
     lengthObj.value = '';
-    girthObj.value = '';
-    weightObj.innerHTML = '';
+    heightObj.value = '';
+    widthObj. value = '';
+	costObj.innerHTML = ''; 
 }
 
 function calcWeight() {
     var length = new Number(lengthObj.value);
-    var girth = new Number(girthObj.value);
-    weightObj.innerHTML = '';
-    if(isNaN(length) || isNaN(girth)) {
-        alert('Invalid length or girth');
+    var height = new Number(heightObj.value);
+	var width = new number (widthObj.value);
+    costObj.innerHTML = '';
+    if(isNaN(length) || isNaN(height) || isNaN(width) {
+        alert('Invalid length or height or width');
         return;
     }
-	weightObj.innerHTML = length*Math.pow(girth,2)/800;
+	costObj.innerHTML = length*Math.pow(height,2)/800;
 }
