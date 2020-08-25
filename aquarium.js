@@ -1,27 +1,25 @@
 window.onload=function() {
     lengthObj = document.getElementById('txtLength');
     heightObj = document.getElementById('txtHeight');
-    widthObj = document.getElementById('txWidth');
+    widthObj = document.getElementById('txtWidth');
 	costObj = document.getElementById('tdCost');
-    document.getElementById('btnReset').onclick = <input type="reset">;
-    document.getElementById('btnCalc').onclick = calcwidth;
+    document.getElementById('btnReset').onclick = resetInputs;
+    document.getElementById('btnCalcCost').onclick = calcCost;
 }
-
 function resetInputs() {
     lengthObj.value = '';
     heightObj.value = '';
-    widthObj. value = '';
+    widthObj.value = '';
 	costObj.innerHTML = ''; 
-}
-
-function calcWeight() {
+}	
+function calcCost() {
     var length = new Number(lengthObj.value);
     var height = new Number(heightObj.value);
-	var width = new number (widthObj.value);
+	var width = new Number(widthObj.value);
     costObj.innerHTML = '';
-    if(isNaN(length) || isNaN(height) || isNaN(width) {
+    if(isNaN(length) || isNaN(height) || isNaN(width)) {
         alert('Invalid length or height or width');
         return;
     }
-	costObj.innerHTML = length*Math.pow(height,2)/800;
+	costObj.innerHTML = (lengthObj.value)*(heightObj.value)*(widthObj.value);
 }
