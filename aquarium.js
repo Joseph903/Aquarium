@@ -10,8 +10,8 @@ function resetInputs() {
     lengthObj.value = '';
     heightObj.value = '';
     widthObj.value = '';
-	costObj.innerHTML = ''; 
-}	
+	costObj.innerHTML = '';	
+}
 function calcCost() {
     var length = new Number(lengthObj.value);
     var height = new Number(heightObj.value);
@@ -21,5 +21,5 @@ function calcCost() {
         alert('Invalid length or height or width');
         return;
     }
-	costObj.innerHTML = (lengthObj.value)*(heightObj.value)*(widthObj.value);
+costObj.innerHTML = 2*(length*height+width*height+length*width)*0.06
 }
